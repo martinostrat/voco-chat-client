@@ -1,0 +1,80 @@
+.box {
+    height: 80vh;
+    width: 50vw;
+    background-color: rgb(49, 46, 46);
+    border-radius: 10px;
+    padding: 0;
+    overflow: scroll;
+}
+
+.chatBubble {
+
+}
+
+/* Testing */
+
+/* Chat bubble */
+
+.bubble {
+    background-color: rgb(88, 86, 86);
+    border-radius: 10px;
+    margin: 25px 20px;
+    padding: 15px;
+}
+
+.bubbleText {
+    color: white;
+    font-size: 18px;
+}
+
+.bubbleTextSenderName, .bubbleTextDateTime {
+    font-size: 10px;
+    color: rgb(156, 151, 151);
+    margin-right: 5px;
+}
+
+/* Message area */
+
+.messageArea {
+    background-color: white;
+    width: inherit;
+    height: 90px;
+    position: absolute;
+    bottom: 0%;
+    border-radius: 0 0 10px 10px;
+
+}
+
+.messageAreaRow {
+    height: 100%;
+}
+
+.messageAreaUser {
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageAreaMessage {
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+
+.messageTextField {
+    height: 100%;
+    width: 100%;
+}
+
+.btnRow {
+    display: flex;
+    justify-content: end;
+}
+
+.subBtn {
+    position: absolute;
+    bottom: -5%;
+    max-width: 65px;
+}
+
