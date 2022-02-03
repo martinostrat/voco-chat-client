@@ -1,3 +1,12 @@
+body {
+    background-color: rgb(64, 64, 177);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box {
     height: 80vh;
     width: 50vw;
@@ -7,13 +16,19 @@
     overflow: scroll;
 }
 
-.chatBubble {
-
+@media only screen and (max-width: 576px) {
+    .box {
+        height: 90vh;
+        width: 85vw;
+    }
 }
 
-/* Testing */
-
-/* Chat bubble */
+@media only screen and (max-width: 768px) {
+    .box {
+        height: 90vh;
+        width: 85vw;
+    }
+}
 
 .bubble {
     background-color: rgb(88, 86, 86);
@@ -33,48 +48,36 @@
     margin-right: 5px;
 }
 
-/* Message area */
+.chat-feed {
+    height: 85%;
+}
 
-.messageArea {
+.message-area {
     background-color: white;
-    width: inherit;
-    height: 90px;
-    position: absolute;
-    bottom: 0%;
-    border-radius: 0 0 10px 10px;
-
+    height: 15%;
 }
 
-.messageAreaRow {
-    height: 100%;
-}
-
-.messageAreaUser {
-    border-right: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.messageAreaMessage {
-    display: flex;
-    padding: 0;
-    align-items: center;
-}
-
-.messageTextField {
-    height: 100%;
+.btn-row {
     width: 100%;
-}
-
-.btnRow {
+    position: inherit;
+    height: 50px;
     display: flex;
     justify-content: end;
 }
 
-.subBtn {
+.send-btn {
     position: absolute;
-    bottom: -5%;
-    max-width: 65px;
+    border: 2px solid white;
+    margin-top: 10px;
+    width: 15%;
+    color: white;
 }
 
+#username-input {
+    height: 100%;
+}
+
+#message-input {
+    height: 100%;
+    width: 100%;
+}

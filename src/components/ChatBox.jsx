@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { ChatBubble } from './ChatBubble';
-
 
 
 export class ChatBox extends Component {
@@ -51,8 +49,10 @@ export class ChatBox extends Component {
     render() {
         return(
             <React.Fragment>
-                <div className="box">
-                    {this.state.messages.map(message => {
+                <div className="container box">
+                    <div className="row col-md-12 col-sm-12 chat-feed">
+                        <div className="col-md-12 col-sm-12">
+                        {this.state.messages.map(message => {
                         return(
                             <div key={message.id} className="chatBubble">
                                 <div className="bubble">
@@ -65,35 +65,37 @@ export class ChatBox extends Component {
                             </div>
                         );
                     })}
+                        </div>
+                    </div>
 
-                    <div className="messageArea">
-                        <div className="row messageAreaRow">
-                            <div className="messageAreaUser col-3">
-                                <input
+                    <div className="row message-area">
+                        <div className="col-md-3 col-sm-3 username-wrapper">
+                            <input
                                     type='text'
+                                    id="username-input"
                                     value={this.state.user}
                                     onChange={this.handleChange}
                                     onBlur={e => this.updateInput('user', e.target.value)}
-                                />
-                            </div>
-                            <div className="messageAreaMessage col-9">
-                                <input
+                            />
+                        </div>
+                        <div className="col-md-9 col-sm-9 message-wrapper">
+                            <input
                                     type="text"
+                                    id="message-input"
                                     placeholder="Type something..."
                                     value={this.state.message}
                                     onChange={e => this.updateInput('message', e.target.value)}
-                                />
-                            </div>
+                            />
                         </div>
                     </div>
-                </div>
-                <div className="row btnRow">
-                    <button
-                        onClick={() => this.sendMessage()}
-                        className='subBtn'
-                    >
-                        Send
-                    </button>
+                    <div className="row col-md-12 col-sm-12 btn-row">
+                        <button
+                            onClick={() => this.sendMessage()}
+                            className='send-btn btn'
+                        >
+                            Send
+                        </button>
+                    </div>
                 </div>
             </React.Fragment>
         );

@@ -1,6 +1,5 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/general.css';
 import './css/chat.css';
 import { Container, Row, Col,  } from 'react-bootstrap';
 import { ChatBox } from './components/ChatBox';
